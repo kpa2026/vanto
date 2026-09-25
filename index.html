@@ -487,6 +487,7 @@
   .method-track > .reveal:nth-child(1){ transition-delay:.05s; }
   .method-track > .reveal:nth-child(2){ transition-delay:.18s; }
   .method-track > .reveal:nth-child(3){ transition-delay:.31s; }
+  .method-track > .reveal:nth-child(4){ transition-delay:.44s; }
   .vtabs-nav > .reveal:nth-child(1){ transition-delay:.05s; }
   .vtabs-nav > .reveal:nth-child(2){ transition-delay:.14s; }
   .vtabs-nav > .reveal:nth-child(3){ transition-delay:.23s; }
@@ -508,19 +509,28 @@
     .contact-shell{ padding:44px 40px; }
     .field-row.two{ grid-template-columns:1fr 1fr; }
     .footer-top{ grid-template-columns:1.2fr .8fr .8fr; }
+    .method-track{ grid-template-columns:repeat(2,1fr); gap:40px 28px; }
+    .method-track::before{ display:none; }
+    .method-step{ padding-left:0; padding-top:64px; }
+    .method-step::before{ content:""; position:absolute; left:60px; right:0; top:23px; height:2px;
+      background:repeating-linear-gradient(to right, var(--blue) 0 6px, transparent 6px 12px); }
   }
 
   /* ============ Desktop ============ */
   @media (min-width:1024px){
     .card-grid{ grid-template-columns:repeat(3,1fr); }
-    .method-track{ grid-template-columns:repeat(3,1fr); gap:28px; }
-    .method-track::before{ left:12px; right:12px; top:23px; bottom:auto; height:2px; width:auto;
-      background:repeating-linear-gradient(to right, var(--blue) 0 6px, transparent 6px 12px); }
-    .method-step{ padding-left:0; padding-top:64px; }
     .tab-panel-inner{ grid-template-columns:1.2fr .8fr; padding:38px; }
     .acc-a-inner{ padding-left:38px; padding-right:38px; }
     .contact-shell{ grid-template-columns:.9fr 1.1fr; }
     .footer-top{ grid-template-columns:1.4fr .7fr .7fr .9fr; }
+  }
+
+  /* Method: four steps in one row only when there is room; 2x2 below this */
+  @media (min-width:1200px){
+    .method-track{ grid-template-columns:repeat(4,1fr); gap:28px; }
+    .method-track::before{ display:block; left:12px; right:12px; top:23px; bottom:auto; height:2px; width:auto;
+      background:repeating-linear-gradient(to right, var(--blue) 0 6px, transparent 6px 12px); }
+    .method-step::before{ display:none; }
   }
 
   /* ---------- Page banner (reserved space for photo/video) ---------- */
@@ -802,26 +812,28 @@
     <div class="wrap" style="position:relative; z-index:1;">
       <div class="section-head reveal">
         <h2>The Vanto Method</h2>
-        <p class="lede" style="margin-top:10px;">Three stages. One strategy built around your study.</p>
+        <p class="lede" style="margin-top:10px;">Four connected capabilities. One recruitment strategy built around your study needs.</p>
       </div>
       <div class="method-track">
         <div class="method-step reveal">
           <div class="method-num epm-depth-front" data-epm-strength="22">01</div>
           <h3>Targeted Advertising</h3>
-          <p class="method-tagline">Reach the right patients</p>
-          <p>Digital advertising strategies are developed around the trial's population, location, recruitment goals, and intended audience.</p>
+          <p>We create digital advertising campaigns tailored to the trial's population, geography, recruitment goals, and intended audience.</p>
         </div>
         <div class="method-step reveal">
           <div class="method-num epm-depth-front" data-epm-strength="34">02</div>
-          <h3>Human Qualification</h3>
-          <p class="method-tagline">Confirm fit before site referral</p>
-          <p>Our team screens prospective participants against study requirements, including caregivers or study partners when participation depends on both.</p>
+          <h3>Patient Qualification &amp; Navigation</h3>
+          <p>Our team screens prospective participants and supports follow-up, scheduling, and communication through site referral.</p>
         </div>
         <div class="method-step reveal">
           <div class="method-num epm-depth-front" data-epm-strength="46">03</div>
-          <h3>Patient Navigation</h3>
-          <p class="method-tagline">Guide the next step</p>
-          <p>Patient navigators manage follow-up, scheduling, and communication, helping qualified participants stay engaged through site referral.</p>
+          <h3>Person-to-Person Community Engagement</h3>
+          <p>We extend recruitment through trusted healthcare relationships, reaching prospective participants through our network of pharmacists and physicians.</p>
+        </div>
+        <div class="method-step reveal">
+          <div class="method-num epm-depth-front" data-epm-strength="58">04</div>
+          <h3>Creative &amp; Educational Content</h3>
+          <p>We create visual and audiovisual materials for recruitment and patient education, including ads, videos, brochures, and other study-support materials.</p>
         </div>
       </div>
       <div class="method-cta">
