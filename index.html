@@ -240,7 +240,7 @@
   .method-track{ position:relative; display:grid; gap:28px; margin-top:6px; }
   .method-track::before{ content:""; position:absolute; left:23px; top:12px; bottom:12px; width:2px;
     background:repeating-linear-gradient(to bottom, var(--blue) 0 6px, transparent 6px 12px); }
-  .method-step{ position:relative; padding-left:64px; }
+  .method-step{ position:relative; padding-left:64px; scroll-margin-top:110px; }
   .method-num{ position:absolute; left:0; top:0; width:48px; height:48px; border-radius:var(--r); background:var(--navy); color:#fff;
     font-weight:900; font-size:1rem; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow); }
   .method-step h3{ margin-bottom:6px; }
@@ -750,8 +750,12 @@
         <span class="chip-label">Qualify</span>
         <span class="chip-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </a>
-      <a href="#metodo" class="chip chip-glass">
-        <span class="chip-label">Navigate</span>
+      <a href="#metodo-engage" class="chip chip-glass">
+        <span class="chip-label">Engage</span>
+        <span class="chip-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a href="#metodo-educate" class="chip chip-glass">
+        <span class="chip-label">Educate</span>
         <span class="chip-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </a>
       <a href="#servicios" class="icon-square icon-square-navy" aria-label="Scroll to explore">
@@ -834,12 +838,12 @@
           <h3>Patient Qualification &amp; Navigation</h3>
           <p>Our team screens prospective participants and supports follow-up, scheduling, and communication through site referral.</p>
         </div>
-        <div class="method-step reveal">
+        <div class="method-step reveal" id="metodo-engage">
           <div class="method-num epm-depth-front" data-epm-strength="46">03</div>
           <h3>Person-to-Person Community Engagement</h3>
           <p>We extend recruitment through trusted healthcare relationships, reaching prospective participants through our network of pharmacists and physicians.</p>
         </div>
-        <div class="method-step reveal">
+        <div class="method-step reveal" id="metodo-educate">
           <div class="method-num epm-depth-front" data-epm-strength="58">04</div>
           <h3>Creative &amp; Educational Content</h3>
           <p>We create visual and audiovisual materials for recruitment and patient education, including ads, videos, brochures, and other study-support materials.</p>
